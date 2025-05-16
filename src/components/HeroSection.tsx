@@ -1,7 +1,6 @@
-import { personalInfo } from "@/lib/data";
-import { Mail, Github, MapPin, Linkedin } from "lucide-react";
-import { motion } from "framer-motion";
-import MotionWrapper from "./MotionWrapper";
+import { personalInfo } from '@/lib/data'
+import { motion } from 'framer-motion'
+import MotionWrapper from './MotionWrapper'
 
 export default function HeroSection() {
   const containerVariants = {
@@ -13,7 +12,7 @@ export default function HeroSection() {
         delayChildren: 0.3,
       },
     },
-  };
+  }
 
   const childVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -24,7 +23,7 @@ export default function HeroSection() {
         duration: 0.5,
       },
     },
-  };
+  }
 
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
@@ -40,7 +39,7 @@ export default function HeroSection() {
               className="text-4xl font-bold mb-2"
               variants={childVariants}
             >
-              {personalInfo.name}{" "}
+              {personalInfo.name}{' '}
               <span className="inline-block animate-pulse">✨</span>
             </motion.h1>
 
@@ -48,7 +47,7 @@ export default function HeroSection() {
               className="text-xl text-muted-foreground mb-6"
               variants={childVariants}
             >
-              Software Engineer 👨‍💻
+              👨‍💻前端开发工程师
             </motion.p>
 
             <motion.div
@@ -58,9 +57,8 @@ export default function HeroSection() {
               <motion.div
                 className="flex items-center text-sm text-muted-foreground"
                 variants={childVariants}
-                whileHover={{ scale: 1.05, color: "#4b5563" }}
+                whileHover={{ scale: 1.05, color: '#4b5563' }}
               >
-                <MapPin className="h-4 w-4 mr-2" />
                 📍 {personalInfo.location}
               </motion.div>
 
@@ -68,9 +66,8 @@ export default function HeroSection() {
                 href={`mailto:${personalInfo.email}`}
                 className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
                 variants={childVariants}
-                whileHover={{ scale: 1.05, color: "#4b5563" }}
+                whileHover={{ scale: 1.05, color: '#4b5563' }}
               >
-                <Mail className="h-4 w-4 mr-2" />
                 ✉️ {personalInfo.email}
               </motion.a>
 
@@ -80,22 +77,20 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
                 variants={childVariants}
-                whileHover={{ scale: 1.05, color: "#4b5563" }}
+                whileHover={{ scale: 1.05, color: '#4b5563' }}
               >
-                <Github className="h-4 w-4 mr-2" />
                 🌟 GitHub
               </motion.a>
 
               <motion.a
-                href={personalInfo.linkedin}
+                href={personalInfo.juejin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
                 variants={childVariants}
-                whileHover={{ scale: 1.05, color: "#4b5563" }}
+                whileHover={{ scale: 1.05, color: '#4b5563' }}
               >
-                <Linkedin className="h-4 w-4 mr-2" />
-                🔗 LinkedIn
+                🔗 掘金
               </motion.a>
             </motion.div>
           </div>
@@ -112,7 +107,7 @@ export default function HeroSection() {
                 src="/profile.jpg"
                 alt="Profile"
                 className="w-48 md:w-60 rounded-full relative ring-2 ring-purple-500/50"
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: 'cover' }}
               />
             </div>
           </motion.div>
@@ -122,19 +117,14 @@ export default function HeroSection() {
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm backdrop-filter p-4 rounded-lg border border-purple-500/20 dark:border-purple-500/10 shadow-sm">
             <p className="text-muted-foreground pl-4 py-2 mb-4 relative">
               <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></span>
-              🚀 Passionate software engineer with a versatile skill set
-              spanning multiple domains. I thrive on solving complex challenges
-              across different platforms and environments, adapting quickly to
-              new technologies and methodologies. My holistic approach combines
-              technical expertise with creative problem-solving, allowing me to
-              develop solutions that are both innovative and practical. I'm
-              driven by continuous learning and a commitment to excellence,
-              whether working independently or collaborating with diverse teams
-              to create impactful, scalable solutions.
+              🚀 充满『passion』的前端工程师，有不限于前端的各种技能。 <br />
+               高效率、高自驱力，能够主动钻研新技术，开拓视野。  <br />
+               擅长解决各种复杂问题，能够发现产品的痛点，并提出有效的解决方案。 <br />
+               坚持可维护、可扩展的高质量编码规范，确保项目稳定与可迭代。
             </p>
           </div>
         </MotionWrapper>
       </div>
     </section>
-  );
+  )
 }
