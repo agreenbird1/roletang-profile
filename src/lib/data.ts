@@ -29,10 +29,10 @@ export const workExperience = [
 
 export const education = [
   {
-    institution: 'Sri Krishna College of Engineering and Technology',
-    location: 'Coimbatore, India',
-    degree: 'B Tech Information Technology',
-    period: 'Jun 2021 - Jun 2025',
+    institution: '重庆理工大学',
+    location: '重庆',
+    degree: '本科',
+    period: '2019/9 - 2023/6',
   },
 ]
 export const skills = [

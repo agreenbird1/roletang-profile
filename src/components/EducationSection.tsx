@@ -11,7 +11,7 @@ export default function EducationSection() {
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
           <h2 className="text-2xl font-bold mb-8 text-center md:text-left">
-            🎓 Education
+            🎓 教育经历
           </h2>
         </MotionWrapper>
 
@@ -19,8 +19,8 @@ export default function EducationSection() {
           {education.map((edu, index) => (
             <TimelineItem
               key={edu.institution}
-              title={`🎓 ${edu.degree}`}
-              subtitle={`🏛️ ${edu.institution}`}
+              title={`🏛️ ${edu.institution}`}
+              subtitle={`🎓 ${edu.degree}`}
               date={`📅 ${edu.period}`}
               isLast={index === education.length - 1}
               index={index}
